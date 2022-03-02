@@ -1,0 +1,28 @@
+{
+    "manifest_version" : 2,
+    "name" : "Ad Blocker",
+    "author" : {
+        "name" : "Rohail Alam",
+        "email" : "rohailalam0307@gmail.com",
+        "url" : "https://www.linkedin.com/in/rohail-alam/"
+    },
+    "description" : "An extension to block adverts which interrupt content",
+    "version" : "1.0.0",
+    "icons" : {"128" : "ad-blocker.png"},
+    "browser_action" : {
+        "default_title" : "AdBlocker",
+        "default_popup" : "popup.html",
+        "default_icon" : "ad-blocker.png"
+    },
+    "background" : {
+        "scripts": [
+            "blocked_domains.js","background.js"
+        ],
+        "persistent" : true
+    },
+    "permissions" : [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ]
+}
